@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Video Speed Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>?? TikTok Video Speed Up (Video Only)</h1>
+        <form id="uploadForm" method="POST" enctype="multipart/form-data">
+            <div class="drop-area" id="dropArea">
+                Drag & Drop Video Here or Click to Upload
+                <input type="file" name="video" id="fileInput" required>
+            </div>
+            <input type="text" name="output_name" placeholder="Output file name (optional)">
+            <button type="submit">Process Video</button>
+        </form>
+        <progress id="progressBar" value="0" max="100"></progress>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
